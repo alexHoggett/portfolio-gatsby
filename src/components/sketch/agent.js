@@ -4,8 +4,8 @@ function Agent(p5, xPos, yPos, xVel, yVel, friction, swarm, cohereRadius ,avoidR
 
   this.draw = function () {
     // draw starling at its current position
-    p5.fill(255);
-    p5.stroke(0)
+    p5.fill('#DE6449');
+    p5.stroke(255)
     const size = 2;
     p5.ellipse(this.pos.x, this.pos.y, size + this.vel.x, size - this.vel.y);
   }

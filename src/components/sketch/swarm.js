@@ -15,16 +15,16 @@ function Swarm(p5) {
   var alignStrength = 0.1;//0.01
 
   p5.setup = () => {
-    let myself = document.querySelector('.p5Canvas');
-    let myContainer = myself.parentNode.parentNode;
-    console.log(myContainer);
-    let myHeight = myContainer.clientHeight;
-    let myWidth = myContainer.clientWidth;
+    let myself = document.querySelector('.react-p5-wrapper');
+    // let myContainer = myself.parentNode.parentNode;
+    // console.log(myContainer);
+    let myHeight = myself.clientHeight;
+    let myWidth = myself.clientWidth;
     p5.createCanvas(myWidth, myHeight);
     p5.background(255);
 
     // Create agents
-    for (var i = 0; i < 1000; i++) {
+    for (var i = 0; i < 1200; i++) {
       // initialise with random position & velocity
       let x = p5.random(p5.width);
       let y = p5.random(p5.height);
@@ -35,9 +35,7 @@ function Swarm(p5) {
   }
 
 p5.draw = () => {
-  // console.log(`${swarm[18].pos}`)
-
-  p5.background(0);
+  p5.background(255);
   for (let agent of swarm) {
     agent.draw();
 

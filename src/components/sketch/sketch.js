@@ -10,9 +10,19 @@ const ReactP5Wrapper = React.lazy(() =>
 )
 
 const SketchContainer = styled.div`
-  width: 400px;
-  height: 200px;
-`
+  position: relative;
+  width: 100%;
+  height: 70%;
+
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+  }
+`;
 
 const Sketch = () => {
   const isSSR = typeof window === 'undefined'
